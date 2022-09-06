@@ -26,7 +26,7 @@ function addItem(e) {
     let newItem2 = document.getElementById('lname').value;
     let newItem3 = document.getElementById('cnumber').value;
     let newItem4 = document.getElementById('fbname').value;
-    let newItem5 = document.getElementById('job').value;
+    //let newItem5 = document.getElementById('job').value;
 
     // create new td element
 
@@ -56,9 +56,9 @@ function addItem(e) {
     //4
 
     //5
-    let tdJob = document.createElement('td');
-    tdJob.className = 'list-table';
-    tdJob.appendChild(document.createTextNode(newItem5));
+   // let tdJob = document.createElement('td');
+   // tdJob.className = 'list-table';
+   // tdJob.appendChild(document.createTextNode(newItem5));
     //5
 
 
@@ -78,21 +78,18 @@ function addItem(e) {
     trNewRecord.append(tdLastName);
     trNewRecord.append(tdNatinalCode);
     trNewRecord.append(tdFatherName);
-    trNewRecord.append(tdJob);
+    //trNewRecord.append(tdJob);
     trNewRecord.append(tdButtoms);
     //tr
 
     // add td to table
     tbody.appendChild(trNewRecord);
 
-    alert();
-    alert('Success!');
-    alert('yes');
+    
 }
 
+
 // Remove item
-
-
 function removeItem(e) {
     if (e.target.classlist.contains('delete')) {
         if (confirm('آیا شمال مطمئن هستید؟')) {
