@@ -1,7 +1,7 @@
 
 .table {
     width: 100%;
-    direction: rtl;
+    direction: ltr;
     border: 2px solid black;
     margin: 0 auto;
     padding: 20px;
@@ -17,7 +17,7 @@ tr , th , td {
 }
 .container div{
     width: 100%;
-    direction: rtl;
+    direction: ltr;
 }
 #myFooter {
 	background-color: #373a48;
