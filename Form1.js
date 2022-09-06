@@ -84,9 +84,13 @@ function addItem(e) {
 
     // add td to table
     tbody.appendChild(trNewRecord);
+
+    alert('Success!');
 }
 
 // Remove item
+
+
 function removeItem(e) {
     if (e.target.classlist.contains('delete')) {
         if (confirm('آیا شمال مطمئن هستید؟')) {
