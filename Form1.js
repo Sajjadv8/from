@@ -12,7 +12,13 @@ let removeclick = document.getElementById('removeclick');
 addclick.addEventListener('click', addItem);
 
 // delete event 
-//table.addEventListener('click', removeItem);
+table.addEventListener('click', removeItem);
+$(document).ready(function(){
+    // Empty container element
+    $("button").click(function(){
+       $(".container").empty();
+    });
+});
 
 //addItem
 function addItem(e) {
