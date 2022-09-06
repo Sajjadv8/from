@@ -85,6 +85,7 @@ function addItem(e) {
     // add td to table
     tbody.appendChild(trNewRecord);
 
+    alert();
     alert('Success!');
 }
 
