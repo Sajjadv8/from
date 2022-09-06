@@ -26,7 +26,6 @@ function addItem(e) {
     let newItem2 = document.getElementById('lname').value;
     let newItem3 = document.getElementById('cnumber').value;
     let newItem4 = document.getElementById('fbname').value;
-    //let newItem5 = document.getElementById('job').value;
 
     // create new td element
 
@@ -55,13 +54,6 @@ function addItem(e) {
     tdFatherName.appendChild(document.createTextNode(newItem4));
     //4
 
-    //5
-   // let tdJob = document.createElement('td');
-   // tdJob.className = 'list-table';
-   // tdJob.appendChild(document.createTextNode(newItem5));
-    //5
-
-
     //Bottoms
     let tdButtoms = document.createElement('td');
     tdButtoms.className = 'list-table';
@@ -88,17 +80,5 @@ function addItem(e) {
     
 }
 
-
-// Remove item
-function removeItem(e) {
-    if (e.target.classlist.contains('delete')) {
-        if (confirm('آیا شمال مطمئن هستید؟')) {
-            let td = e.target.preventElement;
-            list.removeChild(td);
-        }
-
-    }
-
-}
 
 
