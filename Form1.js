@@ -87,6 +87,7 @@ function addItem(e) {
 
     alert();
     alert('Success!');
+    alert('yes');
 }
 
 // Remove item
