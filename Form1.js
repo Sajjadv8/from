@@ -3,7 +3,6 @@ let Fname = document.getElementById("fname");
 let lname = document.getElementById("lname");
 let number = document.getElementById("cnumber");
 let fbname = document.getElementById("fbname");
-let work = document.getElementById("job");
 let addclick = document.getElementById('addclick');
 let removeclick = document.getElementById('removeclick');
 
