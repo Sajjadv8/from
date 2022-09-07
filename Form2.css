@@ -1,9 +1,10 @@
 .table {
-    width: 100%;
+    width: 68.5%;
     direction: ltr;
     border: 2px solid black;
     margin: 0 auto;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 tr,
@@ -25,11 +26,17 @@ tr:nth-child(odd):hover {
     background-color:#87a9b9;
 }
 
-.container div {
+.container.footercon div {
     width: 100%;
     direction: ltr;
 }
 
+.container div {
+    width: 70%;   
+}
+.contact_form form {
+    margin-left: 30px;
+}
 footer .main-footer {
     padding: 20px 0;
     background: #252525;
