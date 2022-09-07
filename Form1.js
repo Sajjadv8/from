@@ -11,7 +11,7 @@ let removeclick = document.getElementById('removeclick');
 addclick.addEventListener('click', addItem);
 
 // delete event 
-table.addEventListener('click', removeItem);
+table.addEventListener('click', removeclick);
 
 
 //addItem
@@ -70,7 +70,6 @@ function addItem(e) {
     trNewRecord.append(tdLastName);
     trNewRecord.append(tdNatinalCode);
     trNewRecord.append(tdFatherName);
-    //trNewRecord.append(tdJob);
     trNewRecord.append(tdButtoms);
     //tr
 
