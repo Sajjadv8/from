@@ -4,21 +4,27 @@ let lname = document.getElementById("lname");
 let number = document.getElementById("cnumber");
 let fbname = document.getElementById("fbname");
 let addclick = document.getElementById('addclick');
-let removeclick = document.getElementById('removeclick');
+//let removeclick = document.getElementById('removeclick');
 
 // button submit
 
 addclick.addEventListener('click', addItem);
 
 // delete event 
-table.addEventListener('click', removeclick);
+//table.addEventListener('click', removeclick);
+$(document).ready(function () {
+
+    $("#tab").click(function () {
+        $("#tab").remove(200);
+    });
+
+});
 
 
 //addItem
 function addItem(e) {
 
-    //alert();
-    console.log(tbody);
+   
     e.preventDefault();
 
     // get value
@@ -76,7 +82,7 @@ function addItem(e) {
     // add td to table
     tbody.appendChild(trNewRecord);
 
-    
+
 }
 
 
