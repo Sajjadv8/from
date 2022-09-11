@@ -4,27 +4,21 @@ let lname = document.getElementById("lname");
 let number = document.getElementById("cnumber");
 let fbname = document.getElementById("fbname");
 let addclick = document.getElementById('addclick');
-//let removeclick = document.getElementById('removeclick');
+let removeclick = document.getElementById('removeclick');
 
 // button submit
 
 addclick.addEventListener('click', addItem);
 
 // delete event 
-//table.addEventListener('click', removeclick);
-$(document).ready(function () {
+table.addEventListener('click', removeclick);
 
-    $("#tab").click(function () {
-        $("#tab").remove(200);
-    });
-
-});
 
 
 //addItem
 function addItem(e) {
 
-   
+
     e.preventDefault();
 
     // get value
@@ -34,7 +28,6 @@ function addItem(e) {
     let newItem4 = document.getElementById('fbname').value;
 
     // create new td element
-
     //1
 
     let tdName = document.createElement('td');
@@ -68,6 +61,7 @@ function addItem(e) {
     deletebtn.appendChild(document.createTextNode('X'));
     tdButtoms.appendChild(deletebtn);
     //Bottoms
+    
 
 
     // tr

@@ -1,17 +1,16 @@
 body {
     background-image: url(landmarks-modern-city.jpg);
     background-repeat: no-repeat;
-  
+   
 }
 .table {
-    width: 68.5%;
+    width: 100%;
     direction: ltr;
     border: 2px solid black;
     margin: 0 auto;
     padding: 20px;
     margin-bottom: 20px;
 }
-
 tr,
 th,
 td {
@@ -37,7 +36,7 @@ tr:nth-child(odd):hover {
 }
 
 .container div {
-    width: 70%;   
+    width: 100%;   
 }
 .contact_form form {
     margin-left: 30px;
