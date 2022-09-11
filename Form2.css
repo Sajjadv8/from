@@ -1,7 +1,13 @@
 body {
-    background-image: url(landmarks-modern-city.jpg);
+    background-image: url(negative-space-journal-pen-flatlay.jpg);
     background-repeat: no-repeat;
-   
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+footer {
+    margin-top: auto;
 }
 .table {
     width: 100%;
@@ -256,4 +262,27 @@ ul.social-footer2 li a {
     -o-transition: all 250ms ease-in-out 0s;
     transition: all 250ms ease-in-out 0s;
 
+}
+.footer-bottom {
+    background: #4b8800;
+    padding: 10px 0px;
+}
+.footer-bottom ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.footer-bottom ul li a{
+    color:#fff;
+}
+
+.footer-bottom ul {
+    float: right;
+}
+
+.footer-bottom ul li:last-child {
+    margin-right: 0;
+}
+.copyright {
+    font-size: 18px;
 }
