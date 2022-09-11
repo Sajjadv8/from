@@ -73,6 +73,8 @@
             <button type="button" value="دریافت اطلاعات" id="fetchData" class="btn btn-info">
                 دریافت اطلاعات
             </button>
+
+            <ul id="userList"></ul>
         </div>
         <!------form-->
         <div class=" col-6">
@@ -169,12 +171,28 @@
     <script src="Form1.js"></script>
     <script>
         $(function () {
-            $('#fetchData').click(function () {
 
-                alert('Amir');
-            })
+            $("#fetchData").on('click', function () {
+
+                $.ajax("https://gorest.co.in/public/v2/users")
+                    .done(function (data) {
+
+                    })
+                    .fail(function () {
+                        alert("error");
+                    })
+                    .always(function () {
+                    });
+
+                    $.get("https://gorest.co.in/public/v2/users",function(data){
+                        $.each(data,function(i,person){
+                            $("#userList").append("<li>"+person.name+ "| "+person.email+"</li>");
+                        });
+                    })
+
+            });
         })
-        
+
     </script>
 </body>
 
