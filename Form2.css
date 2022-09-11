@@ -45,11 +45,14 @@ tr:nth-child(odd):hover {
 
 .container div {
     width: 100%;
+    
 }
 
 .footer-bottom {
-    background: #4b8800;
+    background: #0CBABA;
     padding: 10px 0px;
+    opacity: .50;
+    
 }
 
 .footer-bottom ul li {
@@ -73,3 +76,4 @@ tr:nth-child(odd):hover {
 .copyright {
     font-size: 18px;
 }
+
