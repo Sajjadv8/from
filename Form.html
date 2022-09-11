@@ -186,7 +186,7 @@
 
                 $.get("https://gorest.co.in/public/v2/users", function (data) {
                     $.each(data, function (i, person) {
-                        $("#userList").append("<li>" + person.name + "| " + person.email + "</li>");
+                        $("#userList").append("<li>" + person.name + "- " + person.email+"- "+ "- "+ person.gender+ "</li>");
                     });
                 })
 
