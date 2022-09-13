@@ -22,15 +22,15 @@
 </head>
 
 <body>
+    <!-----NAVBAR-->
     <div class="container">
         <nav class="navbar navbar-expand-lg bg-light col-mt-10">
-
             <a class="navbar-brand" href="#"><img src="https://img.icons8.com/ios/30/000000/contacts.png" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">log out</a>
@@ -40,7 +40,6 @@
                     </li>
                 </ul>
             </div>
-
         </nav>
         <br>
 
@@ -53,153 +52,105 @@
                         <th>email</th>
                         <th>gender</th>
                         <th>status</th>
-                        <th class="button-form-list"><button type="button" class="open" aria-label="open"
-                                id="addclick"><span aria-hidden="true">+</span> </button></th>
+                        <th></th>
                     </tr>
                 </thead>
-                <tbody class="bodytab">
+                <tbody class="tbody">
                     <tr id="tab">
                         <td class="list-table">William</td>
                         <td class="list-table">radsjad9@gmail.com</td>
                         <td class="list-table">male</td>
                         <td class="list-table">active</td>
-                        <td class="list-table"><button type="button" class="close" aria-label="close"
-                                id="removeclick"><span aria-hidden="true">X</span></button></td>
+                        <td class="list-table">
+                            <button type="button"  aria-label="close"
+                                class="closeclick close"><span aria-hidden="true">X</span></button>
+                        </td>
                     </tr>
                 </tbody>
-
             </table>
-
-            <button type="button" value="دریافت اطلاعات" id="fetchData" class="btn btn-info">
-                دریافت اطلاعات
-            </button>
-
-            <ul id="userList"></ul>
         </div>
+
+
+
         <!------form-->
         <div class=" col-6">
             <div class="form">
-
-
-                <div class="formcons">
-
+                <div class="form-submit-information">
                     <form class="well form-horizontal" action=" " method="post" id="contact_form">
                         <fieldset>
-                            <legend dir="ltr" id="legp"> submit information</legend>
+                            <legend dir="ltr" id="text-submit"> submit information</legend>
                             <div class="form-group">
-                                <label class="col-md-4 control-label">name </label>
+                                <label class="col-md-4 control-label">name :</label>
                                 <div class="col-md-4 inputGroupContainer">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input name="first_name" placeholder="nina" class="form-control" type="text"
-                                            id="fname" required>
+                                        <input name="name" placeholder="nina" class="form-control" type="text" id="name"
+                                            required>
                                     </div>
                                 </div>
                             </div>
-
-
-
                             <div class="form-group">
                                 <label class="col-md-4 control-label">email :</label>
                                 <div class="col-md-4 inputGroupContainer">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input name="last_name" placeholder="rido@gmail.com" class="form-control"
-                                            type="text" id="ename" required>
+                                        <input name="email" placeholder="rido@gmail.com" class="form-control"
+                                            type="text" id="email" required>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <label class="col-md-4 control-label">gender :</label>
                                 <div class="col-md-4 inputGroupContainer">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i
                                                 class="glyphicon glyphicon-envelope"></i></span>
-                                        <input name="number" placeholder="male or female" class="form-control"
-                                            type="text" id="cnumber">
+                                        <input name="gender" placeholder="male or female" class="form-control"
+                                            type="text" id="gender">
                                     </div>
                                 </div>
                             </div>
-
-
-
-
                             <div class="form-group">
                                 <label class="col-md-4 control-label">status :</label>
                                 <div class="col-md-4 inputGroupContainer">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i
                                                 class="glyphicon glyphicon-earphone"></i></span>
-                                        <input name="phone" placeholder="active" class="form-control" type="text"
-                                            id="fbname">
+                                        <input name="status" placeholder="active" class="form-control" type="text"
+                                            id="status">
                                     </div>
                                 </div>
                             </div>
+                        </fieldset>
+                        <button type="button" value="send" id="send-Data" class="btn btn-info mt-4 mb-2">
+                            send
+                        </button>
+                    </form>
+
                 </div>
-                </fieldset>
-                </form>
-
             </div>
-        </div>
-
-        <!---------footer-->
-        <footer id="footer" class="footer-1">
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <p class="copyright text-uppercase">Copyright © 2018
-                            </p>
-                        </div>
-                        <div class="col-sm-7">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our services</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
+            <!---------footer-->
+            <footer id="footer" class="footer-1">
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <p class="copyright text-uppercase">Copyright © 2018</p>
+                            </div>
+                            <div class="col-sm-7">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Our services</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-    </div>
-
-
-
-    <script src="Form1.js"></script>
-   <!-------- <script>
-        $("#legp").click(function() {
-            $(this).toggle(3000,function () {
-                $("#legp").toggle(2000);
-            });
-        })
-
-        $(function () {
-
-            $("#fetchData").on('click', function () {
-
-                $.ajax("https://gorest.co.in/public/v2/users")
-                    .done(function (data) {
-
-                    })
-                    .fail(function () {
-                        alert("error");
-                    })
-                    .always(function () {
-                    });
-
-                $.get("https://gorest.co.in/public/v2/users", function (data) {
-                    $.each(data, function (i, person) {
-                        $("#userList").append("<li>" + person.name + "---" + person.email+"--- "+ "--- "+ person.gender+ "</li>");
-                    });
-                })
-
-            });
-        })
-
-    </script>----->
+            </footer>
+        </div>
+        <script src="Form1.js"></script>
 </body>
 
 </html>
