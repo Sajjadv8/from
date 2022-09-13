@@ -85,7 +85,7 @@
 
                     <form class="well form-horizontal" action=" " method="post" id="contact_form">
                         <fieldset>
-                            <legend dir="ltr"> submit information</legend>
+                            <legend dir="ltr" id="legp"> submit information</legend>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">name </label>
                                 <div class="col-md-4 inputGroupContainer">
@@ -170,6 +170,12 @@
 
     <script src="Form1.js"></script>
     <script>
+        $("#legp").click(function() {
+            $(this).toggle(3000,function () {
+                $("#legp").toggle(2000);
+            });
+        })
+
         $(function () {
 
             $("#fetchData").on('click', function () {
@@ -186,7 +192,7 @@
 
                 $.get("https://gorest.co.in/public/v2/users", function (data) {
                     $.each(data, function (i, person) {
-                        $("#userList").append("<li>" + person.name + "- " + person.email+"- "+ "- "+ person.gender+ "</li>");
+                        $("#userList").append("<li>" + person.name + "---" + person.email+"--- "+ "--- "+ person.gender+ "</li>");
                     });
                 })
 
