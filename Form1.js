@@ -14,7 +14,22 @@
 //     })
 
 // add book to list
+$(function () {
 
+
+    $("#request-data").on("click", function () {
+
+
+        $.get("https://gorest.co.in/public/v2/users", function (data) {
+            $.each(data, function (i, person) {
+                $(".tbody").append("<tr><td>" + person.name + "</td>" + "<td>" + person.email + "</td>" + "<td>" + person.gender + "</td>" + "<td>" + person.status+"</td>" + "<td>" +"<button type='button' aria-label='close' class='closeclick close'><span aria-hidden='true'>X</span></button> "+ "</td></tr>");
+
+            })
+
+        })
+    })
+
+})
 
 $(document).on("click", ".closeclick", function () {
     $(this).parent().parent().remove();
