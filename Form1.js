@@ -20,7 +20,7 @@ $(function () {
 
     })
 
-})
+});
 
 $(document).on("click", ".closeclick", function () {
     $(this).parent().parent().remove();
@@ -59,5 +59,5 @@ $("#send-Data").on("click", function () {
     });
 
 
-})
+});
 
