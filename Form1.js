@@ -32,11 +32,7 @@ $("#send-Data").on("click", function () {
     });
 });
 $(function () {
-
-
     $("#request-data").on("click", function () {
-
-
         $.get("https://gorest.co.in/public/v2/users", function (data) {
             $.each(data, function (i, person) {
 
