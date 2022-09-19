@@ -52,16 +52,3 @@ $(function () {
 
 });
 
-$(".closeclick").on("click", () => {
-    deletetr();
-    e.preventDefault();
-
-
-    $.ajax({
-        type: "DELETE",
-        URL: "https//gorest.co.in/public/v2/users",
-        data: { id: id },
-        success: function (response) { alert(response) }
-    })
-});
-
