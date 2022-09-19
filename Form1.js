@@ -52,3 +52,28 @@ $(function () {
 
 });
 
+$(document).on('click', '.clearclick close', () => {
+    deletetr();
+});
+
+$(".clearclick close").on("click", function (e) {
+    e.preventDefault();
+
+    let id = $(this).find(".form-control").val();
+   
+
+    $.ajax({
+        type: "DELETE",
+        URL: "https : // gorest.co.in/public/v2/users",
+        data: { id: id },
+        success: function () {
+            alert("good");
+        },
+        Error: function () {
+            alert("no good");
+
+        }
+
+    })
+})
+
