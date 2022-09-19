@@ -2,8 +2,8 @@
 $(document).on("click", ".closeclick", function () {
     $(this).parent().parent().remove();
 });
-$("#send-Data").on("click", function () {
-
+$("#send-Data").on("click", function (e) {
+    e.preventDefault();
     var tr = $("<tr></tr>")
         .append("<td>" + $("#name").val() + "</td>")
         .append("<td>" + $("#email").val() + "</td>")
@@ -12,13 +12,16 @@ $("#send-Data").on("click", function () {
         .append("<td><button type='button'  aria-label='close' class='closeclick close'><span aria-hidden='true'>X</span></button></td>");
 
     $("tbody").append(tr);
+    let rad = new XMLHttpRequest();
 
+    rad.open("Delete" , "https://gorest.co.in/public/v2/users");
+    
     var data = {
-        name: "ali",
-        email: "redsahad@gmail.com",
-        gender: "male",
-        status: "active"
-    }
+        name: $("#name").val(),
+        email: $("#email").val(),
+        gender: $("#gender").val(),
+        status: $("#status").val()
+    };
     $.ajax({
         type: "POST",
         headers: {
@@ -27,15 +30,16 @@ $("#send-Data").on("click", function () {
         url: "https://gorest.co.in/public/v2/users",
         data: data,
         success: function (response) {
-            alert(response.id);
+            // alert(response.id);
         }
     });
-});
+
+   });
 $(function () {
     $("#request-data").on("click", function () {
         $.get("https://gorest.co.in/public/v2/users", function (data) {
             $.each(data, function (i, person) {
-
+                
                 if (person.status == "active") {
                     $(".tbody").append("<tr class='active'><td>" + person.name + "</td>" + "<td>" + person.email + "</td>" + "<td>" + person.gender + "</td>" + "<td>" + person.status + "</td>" + "<td>" + "<button type='button' aria-label='close' class='closeclick close'><span aria-hidden='true'>X</span></button> " + "</td></tr>");
                 } else {
