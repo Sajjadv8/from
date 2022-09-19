@@ -52,12 +52,13 @@ $(function () {
 
 });
 
-$(document).on('click', '.clearclick close', () => {
+$(document).on('click', '.clearclick close',function() {
     deletetr();
 });
 
 $(".clearclick close").on("click", function (e) {
     e.preventDefault();
+    alert("go");
 
     let id = $(this).find(".form-control").val();
    
