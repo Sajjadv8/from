@@ -33,6 +33,7 @@ $("#send-Data").on("click", function (e) {
     });
 
 });
+
 $(function () {
     $("#request-data").on("click", function () {
         $.get("https://gorest.co.in/public/v2/users", function (data) {
@@ -52,29 +53,27 @@ $(function () {
 
 });
 
-$(document).on('click', '.clearclick close',function() {
-    deletetr();
-});
+$(function () {
+    $(".clearclick close").on("click", function (e) {
+        e.preventDefault();
+        alert("go");
 
-$(".clearclick close").on("click", function (e) {
-    e.preventDefault();
-    alert("go");
+        let id = $(this).find(".form-control").val();
 
-    let id = $(this).find(".form-control").val();
-   
 
-    $.ajax({
-        type: "DELETE",
-        URL: "https : // gorest.co.in/public/v2/users",
-        data: { id: id },
-        success: function () {
-            alert("good");
-        },
-        Error: function () {
-            alert("no good");
+        $.ajax({
+            type: "DELETE",
+            URL: "https : // gorest.co.in/public/v2/users",
+            data: { id: id },
+            success: function () {
+                alert("good");
+            },
+            Error: function () {
+                alert("no good");
 
-        }
+            }
 
+        })
     })
-})
 
+});
