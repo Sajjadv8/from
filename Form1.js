@@ -54,28 +54,32 @@ $(function () {
 });
 
 $(function () {
-    $(".closeclick close").on("click", function (e) {
+    $("#closeclick").on("click", function (e) {
         e.preventDefault();
-        alert("go");
-
-        let id = $(this).find(".form-control").val();
+        $.each(data, function (i, person) {
 
 
-        $.ajax({
-            type: "DELETE",
-            URL: "https : // gorest.co.in/public/v2/users",
-            data: { id: id },
-            headers : {
-              "Authorization" : "Bearer 658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119 "
-            },
-            success: function () {
-                alert("good");
-            },
-            Error: function () {
-                alert("no good");
 
-            }
+            let id = $(this).find(".form-control").val();
 
+
+            $.ajax({
+                type: "DELETE",
+                URL: "https : // gorest.co.in/public/v2/users",
+                data: { id: id },
+                headers: {
+                    "Authorization": "Bearer 658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119 "
+                },
+                success: function () {
+                    alert("good");
+                },
+                Error: function () {
+                    alert("no good");
+
+                }
+
+            })
+            alert("go");
         })
     })
 
