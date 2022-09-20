@@ -63,11 +63,8 @@ $("#table").on("click", ".remove-category", function (e) {
             'Authorization': "Bearer  658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119"
         },
 
-        type: "GET",
-        dataType: "JSON"
+        type: "Delete",
     }).done(function (response) {
-        if (response.status) {
-            $(this).parents("tr").remove();
-        }
+        alert("good");
     });
 });
