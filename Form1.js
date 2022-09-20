@@ -61,7 +61,7 @@ $(function () {
             var id = $('#id').attr('value');
             $.ajax({
                 type: "POST",
-                url: "delete.php",
+                URL : " https :// gorest.co.in/public/v2/users" ,
                 data: "id=" + id,
                 headers: {
                     "Authorization": "Bearer 658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119 "
