@@ -63,7 +63,7 @@ $(function () {
         }
         $.ajax({
             type: "DELETE",
-            url: " https://gorest.co.in/public/v2/users/" + id,
+            url: " https://gorest.co.in/public/v2/users",
             data: data,
             headers: {
                 "Authorization": "Bearer 658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119 "
