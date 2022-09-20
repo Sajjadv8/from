@@ -53,18 +53,20 @@ $(function () {
 
 });
 
-$("#table").on("click", ".remove-category", function (e) {
-    e.preventDefault();
+$(function () {
+    $("#table").on("click", ".remove-category", function (e) {
+        e.preventDefault();
+        alert("go");
+        let Data = $(this).data("id");
+        $.ajax({
+            url: "https://groest.co.in/public/v2/users" + '/remove_category/' + Data,
+            headers: {
+                'Authorization': "Bearer  658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119"
+            },
 
-    let Data = $(this).data("id");
-    $.ajax({
-        url: "https://groest.co.in/public/v2/users" + '/remove_category/' + Data,
-        headers: {
-            'Authorization': "Bearer  658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119"
-        },
-
-        type: "Delete",
-    }).done(function (response) {
-        alert("good");
+            type: "Delete",
+        }).done(function (response) {
+            alert("good");
+        });
     });
 });
