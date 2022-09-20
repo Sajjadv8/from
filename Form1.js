@@ -56,9 +56,11 @@ $(function () {
 $(function () {
     $("#closeclick").on("click", function (e) {
         e.preventDefault();
-        
-        alert("go");
 
+        alert("go");
+        let data = {
+            
+        }
         $.ajax({
             type: "DELETE",
             url: " https://gorest.co.in/public/v2/users/" + id,
