@@ -54,7 +54,7 @@ $(function () {
 });
 
 $(function () {
-    $("#table").on("click", ".remove-category", function (e) {
+    $("#table").on("click", function (e) {
         e.preventDefault();
         alert("go");
         let Data = $(this).data("id");
@@ -63,7 +63,6 @@ $(function () {
             headers: {
                 'Authorization': "Bearer  658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119"
             },
-
             type: "Delete",
         }).done(function (response) {
             alert("good");
