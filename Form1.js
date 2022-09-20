@@ -57,22 +57,21 @@ $(function () {
     $("#closeclick").on("click", function (e) {
         e.preventDefault();
         alert("go");
-        $("img.delete").click(function () {
+        $("#closeclick").click(function () {
             var id = $('#id').attr('value');
             $.ajax({
-                type: "POST",
-                URL : " https :// gorest.co.in/public/v2/users" ,
-                data: "id=" + id,
+                type: "DELETE",
+                URL: " https :// gorest.co.in/public/v2/users",
+                data: data,
                 headers: {
                     "Authorization": "Bearer 658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119 "
                 },
-                
+
                 success: function () {
-                    $('tr.selector').remove();
-                    $('div.success').fadeIn();
+                    alert("GOOD");
                 }
             });
-            return false;
+
         });
     })
 
