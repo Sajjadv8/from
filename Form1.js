@@ -56,7 +56,7 @@ $(function () {
 $(function () {
     $("#table").on("click", function (e) {
         e.preventDefault();
-        alert("go");
+        alert("goooo");
         let Data = $(this).data("id");
         $.ajax({
             url: "https://groest.co.in/public/v2/users" + '/remove_category/' + Data,
