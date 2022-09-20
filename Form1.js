@@ -56,14 +56,15 @@ $(function () {
 $(function () {
     $("#table").on("click", function (e) {
         e.preventDefault();
-        alert("goooo");
+
         let Data = $(this).data("id");
         $.ajax({
-            url: "https://groest.co.in/public/v2/users" + '/remove_category/' + Data,
+            url: "https://gorest.co.in/public/v2/users" + '/remove_category/' + Data,
             headers: {
                 'Authorization': "Bearer  658874826d15de24118bdb29b55117893ac85bf87d8c1b11148f7ea10fb43119"
             },
             type: "Delete",
+            datatype: "json",
         }).done(function (response) {
             alert("good");
         });
